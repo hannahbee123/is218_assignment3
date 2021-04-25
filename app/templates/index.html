@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Sex</th>
+        <th scope="col">Age</th>
+        <th scope="col">Height</th>
+        <th scope="col">Weight</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for biostat in biostats %}
+    <tr>
+        <td>{{ biostat.biostats_1 }}</td>
+        <td>{{ biostat.Column_2 }}</td>
+        <td>{{ biostat.Column_3 }}</td>
+        <td>{{ biostat.Column_4 }}</td>
+        <td>{{ biostat.Column_5 }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
