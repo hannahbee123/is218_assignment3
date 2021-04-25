@@ -6,18 +6,18 @@ from flask import Flask, Response
 app = Flask(__name__)
 
 
-def address_import() -> List[Dict]:
+def biostats_import() -> List[Dict]:
     config = {
         'user': 'root',
         'password': 'root',
         'host': 'db',
         'port': '3306',
-        'database': 'addressData'
+        'database': 'biostatsData'
     }
     connection = mysql.connector.connect(**config)
     cursor = connection.cursor(dictionary=True)
 
-    cursor.execute('SELECT * FROM tblAddressImport')
+    cursor.execute('SELECT * FROM biostats')
     result = cursor.fetchall()
 
     cursor.close()
@@ -28,7 +28,7 @@ def address_import() -> List[Dict]:
 
 @app.route('/')
 def index() -> str:
-    js = json.dumps(address_import())
+    js = json.dumps(biostats_import())
     resp = Response(js, status=200, mimetype='application/json')
     return resp
 

@@ -1,17 +1,29 @@
-CREATE DATABASE addressData;
-use addressData;
+CREATE DATABASE biostatsData;
+use biostatsData;
 
-CREATE TABLE IF NOT EXISTS tblAddressImport (
-    `fldFirstName` VARCHAR(21) CHARACTER SET utf8,
-    `fldLastName` VARCHAR(21) CHARACTER SET utf8,
-    `fldAddress` VARCHAR(50) CHARACTER SET utf8,
-    `fldCity` VARCHAR(30) CHARACTER SET utf8,
-    `fldState` VARCHAR(2) CHARACTER SET utf8,
-    `fldZip` INT
+CREATE TABLE IF NOT EXISTS biostats (
+    `biostats_1` VARCHAR(4) CHARACTER SET utf8,
+    `Column_2` VARCHAR(10) CHARACTER SET utf8,
+    `Column_3` VARCHAR(6) CHARACTER SET utf8,
+    `Column_4` VARCHAR(14) CHARACTER SET utf8,
+    `Column_5` VARCHAR(15) CHARACTER SET utf8
 );
-INSERT INTO tblAddressImport VALUES
-    ('Joan', 'Jet', '9 Terrace Rd', 'Desert City', 'CO', 11111),
-    ('John', 'Doe', '120 Jefferson St', 'Riverside', 'NJ', 22222),
-    ('Jack', 'McGinnis', '220 Hobo Ave', 'Philadelphia', 'PA', 33333),
-    ('John', 'Repici', '120 Jefferson St', 'Riverside', 'NJ', 44444),
-    ('Stephen', 'Tyler', '7452 Terrace Rd', 'SomeTown', 'SD', 55555);
+INSERT INTO biostats VALUES
+    ('Alex','       "M"','41','74','170'),
+    ('Bert','       "M"','42','68','166'),
+    ('Carl','       "M"','32','70','155'),
+    ('Dave','       "M"','39','72','167'),
+    ('Elly','       "F"','30','66','124'),
+    ('Fran','       "F"','33','66','115'),
+    ('Gwen','       "F"','26','64','121'),
+    ('Hank','       "M"','30','71','158'),
+    ('Ivan','       "M"','53','72','175'),
+    ('Jake','       "M"','32','69','143'),
+    ('Kate','       "F"','47','69','139'),
+    ('Luke','       "M"','34','72','163'),
+    ('Myra','       "F"','23','62','98'),
+    ('Neil','       "M"','36','75','160'),
+    ('Omar','       "M"','38','70','145'),
+    ('Page','       "F"','31','67','135'),
+    ('Quin','       "M"','29','71','176'),
+    ('Ruth','       "F"','28','65','131');
