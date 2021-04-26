@@ -2,13 +2,14 @@ CREATE DATABASE biostatsData;
 use biostatsData;
 
 CREATE TABLE IF NOT EXISTS biostats (
+    `id` int AUTO_INCREMENT,
     `biostats_1` VARCHAR(4) CHARACTER SET utf8,
     `Column_2` VARCHAR(10) CHARACTER SET utf8,
     `Column_3` VARCHAR(6) CHARACTER SET utf8,
     `Column_4` VARCHAR(14) CHARACTER SET utf8,
     `Column_5` VARCHAR(15) CHARACTER SET utf8
 );
-INSERT INTO biostats VALUES
+INSERT INTO biostats (biostats_1,Column_2,Column_3,Column_4,Column_5) VALUES
     ('Alex','       "M"','41','74','170'),
     ('Bert','       "M"','42','68','166'),
     ('Carl','       "M"','32','70','155'),

@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<form action="/view/{{biostat.id}}" method ="get">
+<div class="card" class="m-5 p-2">
+    <h5 class="card-title">{{ biostat.biostats_1 }}</h5>
+
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{ biostat.biostats_1 }}</li>
+        <li class="list-group-item">{{ biostat.Column_2 }}</li>
+        <li class="list-group-item">{{ biostat.Column_3 }}</li>
+        <li class="list-group-item">{{ biostat.Column_4 }}</li>
+        <li class="list-group-item">{{ biostat.Column_5 }}</li>
+    </ul>
+    <div class="card-body">
+        <a href="/edit/{{biostat.id}}" class="card-link btn btn-primary">Edit</a>
+    </div>
+</div>
+</form>
+<form action="/delete/{{biostat.id}}" method="post"><button type="submit" class="btn btn-danger">Delete</button></form>
+
+
+{% endblock %}

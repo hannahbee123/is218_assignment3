@@ -13,7 +13,7 @@
     <tbody>
     {% for biostat in biostats %}
     <tr>
-        <td>{{ biostat.biostats_1 }}</td>
+        <td><a href="view/{{biostat.id}}">{{ biostat.biostats_1 }}</a></td>
         <td>{{ biostat.Column_2 }}</td>
         <td>{{ biostat.Column_3 }}</td>
         <td>{{ biostat.Column_4 }}</td>
